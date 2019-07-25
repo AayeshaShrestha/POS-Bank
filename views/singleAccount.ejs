@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Hyperledger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      h2 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 30px; font-weight: normal; line-height: 48px; margin: 0; text-decoration: underline; }
+      p { color: #111; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 32px; margin: 0; }
+      label {color: #b48608; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; margin: 0 0 8px; }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img src="https://theagif.org/wp-content/uploads/2019/04/Keela-Orange-Main.png" alt="Keela Icon" style="width:100px;margin-top:12px;">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row" style="margin-top: 30px; margin-left: 10px;">
+        <div class="col-md-7" style="padding-left: 40px;"><br>
+          <h2>General Details</h2>
+            <p>Full Name: <strong><%= account.accountDetails.args.ownerDetails.OwnerName %></strong></p>
+            <p>Address: <strong><%= account.accountDetails.args.ownerDetails.PermanentAddress %></strong><p>
+            <p>Email Address : <strong><%= account.accountDetails.args.ownerDetails.Contact.Email %></strong></p>
+            <p>Phone Number : <strong><%= account.accountDetails.args.ownerDetails.Contact.PhoneNumber %></strong></p>
+            <p>Citizenship ID : <strong><%= account.accountDetails.args.ownerDetails.CitizenshipID %></strong></p><br>
+          <h2>Account Details</h2>
+            <p>Account ID : <strong><%= account.accountDetails.args.accountId %></strong></p>
+            <p>Username : <strong><%= account.username %></strong></p>
+            <p>Created Date: <strong><%= account.createDate %></strong></p>
+            <p>Balance: <strong>Rs. <%= account.accountDetails.args.balance.amount %></strong></p>
+        </div>
+        <div class="col-md-5" style="padding-left:40px;"><br><br>
+          <form id="deposit" action="/deposit/<%= account._id %>" method="post">
+            <label>Enter amount to deposit to this account.</label><br>
+            <input placeholder="Rs. 1000" name="amountToTransfer" type="number" required>
+            <button type="submit" class="btn btn-success" name="button">Deposit</button>
+          </form><br><br><br>
+          <label>Scan this for user login.</label><br>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThf4HfAP9unKn6gc3SV9iooj0U_c474OKKFRoqhudqYND3b6tLbQ" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

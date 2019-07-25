@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Hyperledger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img src="https://theagif.org/wp-content/uploads/2019/04/Keela-Orange-Main.png" alt="Keela Icon" style="width:100px;margin-top:12px;">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <button type="button" class="btn btn-lg btn-warning" style="float: right;" name="button"><a href="/addUser">Add Account</a></button><br><br><br>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Citizenship ID</th>
+            <th>Username</th>
+            <th>Account ID</th>
+            <th>Account Created Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% accounts.forEach(function(account,i){ %>
+            <tr>
+              <td><%= i+1 %></td>
+              <td><%= account.accountDetails.args.ownerDetails.OwnerName %></td>
+              <td><%= account.accountDetails.args.ownerDetails.PermanentAddress %></td>
+              <td><%= account.accountDetails.args.ownerDetails.Contact.Email %></td>
+              <td><%= account.accountDetails.args.ownerDetails.Contact.PhoneNumber %></td>
+              <td><%= account.accountDetails.args.ownerDetails.CitizenshipID %></td>
+              <td><%= account.username %></td>
+              <td><%= account.accountDetails.args.accountId %></td>
+              <td><%= account.createDate %></td>
+              <td><a class="btn btn-info" href="/singleAccount/<%= account._id %>"><i class="fa fa-pencil"></i></a>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

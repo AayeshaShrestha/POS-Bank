@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Hyperledger</title>
+    <link href="/stylesheets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 orgzInfo">
+          <img src="https://theagif.org/wp-content/uploads/2019/04/Keela-Orange-Main.png" alt="Keela Icon" style="width:300px;">
+        </div>
+        <div class="col-md-6">
+          <form id="contact" action="/login" method="post">
+            <h3>Login to your bank account. </h3><br>
+            <fieldset>
+              <label>Username </label>
+              <input placeholder="Your user name" name="username" type="text" required>
+            </fieldset>
+            <fieldset>
+              <label>Password</label>
+              <input placeholder="Your password" name="password" type="password" required>
+            </fieldset>
+            <fieldset>
+              <button type="submit">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

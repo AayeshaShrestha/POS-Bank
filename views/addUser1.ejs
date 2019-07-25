@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Hyperledger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img src="https://theagif.org/wp-content/uploads/2019/04/Keela-Orange-Main.png" alt="Keela Icon" style="width:100px;margin-top:12px;">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <form id="addUser" action="/addUser" method="post">
+        <h3>Register user. </h3><br>
+        <fieldset>
+          <label>Username </label>
+          <input placeholder="Your user name" name="username" type="text" required value="<%= username %>">
+        </fieldset>
+        <fieldset>
+            <label>Account Type </label><br>
+            <input type="radio" name="roles" value="customer" checked> Customer<br>
+            <input type="radio" name="roles" value="supermarket"> Supermarket<br>
+        </fieldset>
+        <fieldset>
+          <button type="submit" class="btn btn-primary" style="float: right">Next</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

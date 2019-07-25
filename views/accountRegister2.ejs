@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POS Hyperledger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img src="https://theagif.org/wp-content/uploads/2019/04/Keela-Orange-Main.png" alt="Keela Icon" style="width:100px;margin-top:12px;">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <form id="userRegistration" action="/registerAccount" method="post">
+        <h3>Register user.</h3><br>
+        <input type="hidden" name="username" value="<%= account.username %>">
+        <input type="hidden" name="password" value="<%= account.password %>">
+        <fieldset>
+          <div class="row">
+            <div class="col-md-4">
+              <label>First name  </label>
+              <input placeholder="First name" name="firstname" type="text" required>
+            </div>
+            <div class="col-md-4">
+              <label>Middle name  </label>
+              <input placeholder="Middle name" name="middlename" type="text">
+            </div>
+            <div class="col-md-4">
+              <label>Last name  </label>
+              <input placeholder="Last name" name="lastname" type="text" required>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+            <label>Permanent Address</label><br>
+            <input placeholder="Address" name="address" type="text" required>
+        </fieldset>
+        <fieldset>
+            <label>Email Address</label><br>
+            <input placeholder="Email address" name="emailAddress" type="email">
+        </fieldset>
+        <fieldset>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Phone Number</label><br>
+              <input placeholder="Phone Number" name="phone" type="number" required>
+            </div>
+            <div class="col-md-6">
+              <label>Citizenship Number</label><br>
+              <input type="text" name="citizenship" placeholder="Citizenship Number" required>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+            <label>Account Type</label><br>
+            <input type="radio" name="accType" value="fixedAcc" checked> Fixed Deposit<br>
+            <input type="radio" name="accType" value="savingsAcc"> Savings Account<br>
+        </fieldset>
+        <fieldset>
+          <button type="submit" class="btn btn-primary" style="float: right">Register account</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

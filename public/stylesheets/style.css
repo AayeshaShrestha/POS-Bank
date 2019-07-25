@@ -1,0 +1,93 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Roboto", Helvetica, Arial, sans-serif;
+font-weight: 100;
+font-size: 12px;
+background: #778899;
+}
+
+#contact {
+background: #F9F9F9;
+padding: 35px;
+margin: 100px 80px 0 0;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+fieldset {
+border: medium none !important;
+margin: 0 0 10px;
+min-width: 100%;
+padding: 0;
+width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="password"],
+#contact textarea {
+width: 100%;
+border: 1px solid #ccc;
+background: #FFF;
+margin: 0 0 5px;
+padding: 10px;
+}
+
+#contact button{
+cursor: pointer;
+width: 100%;
+background: #4CAF50;
+margin: 0 0 5px;
+padding: 10px;
+font-size: 15px;
+}
+
+.orgzInfo {
+  padding: 80px;
+  margin: 140px 0;
+}
+
+#addUser {
+background: #F9F9F9;
+padding: 35px;
+width: 350px;
+margin: auto;
+margin-top: 60px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+fieldset {
+border: medium none !important;
+margin: 0 0 10px;
+min-width: 100%;
+padding: 0;
+width: 100%;
+}
+
+#addUser input[type="text"],
+#addUser input[type="password"],
+#deposit input[type="number"],
+#userRegistration input[type="text"],
+#userRegistration input[type="email"],
+#userRegistration input[type="number"],
+#addUser textarea {
+width: 100%;
+border: 1px solid #ccc;
+background: #FFF;
+margin: 0 0 5px;
+padding: 10px;
+}
+
+#userRegistration {
+background: #F9F9F9;
+padding: 35px;
+width: 550px;
+margin: auto;
+margin-top: 30px;
+margin-bottom: 20px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
